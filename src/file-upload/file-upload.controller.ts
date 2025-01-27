@@ -41,7 +41,7 @@ export class FileUploadController {
     file: Express.Multer.File,
   ) {
     console.log('file', file);
-    return;
+    return  { message: 'File uploaded successfully', file: file };
 
     return this.fileUploadService.handleFileUpload(file);
   }
